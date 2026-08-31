@@ -8,7 +8,7 @@ Briefly this works by solving a self consistency problem, where the stain vector
 
 ## Usage
 The ScanProcessor should accept tensors of shape BxCxHxW and CxHxW, but the compiled version should be fed with BxCxHxW shaped tensors.
-Other than that the input tensors should be floats in the range [0,1], thus you should divide the read_iamge outputs by 255.0. 
+Other than that the input tensors should be floats in the range [0,1], thus you should divide the read_image outputs by 255.0. 
 ```python
 from scan import ScanProcessor
 from torchvision.io import read_image
