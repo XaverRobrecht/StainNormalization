@@ -28,7 +28,7 @@ image = read_image("data/target.jpg").unsqueeze(0).to(device)/255.0
 normalized_image = processor(image)[0] # the output image is in float32 values in [0,1]
 ```
 
-# Installation
+## Installation
 I am not sure if I'am going to upload anything on pypi, but you can either install the package directly from this repo or use the .whl file from the latest release using pip. I tested this on pytorch 2.11, but most older versions should work just fine. I will eventually run a test and supply a list of supported versions and add corresponding requirements to the package.
 
 
