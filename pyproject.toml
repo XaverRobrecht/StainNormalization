@@ -1,1 +1,30 @@
+[build-system]
+requires = ["setuptools>=68", "wheel"]
+build-backend = "setuptools.build_meta"
 
+[project]
+name = "scan-stain-normalization"      # check availability on PyPI; "scan" alone is almost certainly taken
+version = "0.1.0"
+description = "PyTorch implementation of the SCAN algorithm for stain normalization of histopathology images"
+readme = "README.md"
+license = { text = "MIT" }
+authors = [{ name = "Xaver Robrecht" }]
+requires-python = ">=3.10"
+dependencies = [
+    "torch>=2.1",
+]
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: OS Independent",
+]
+
+[project.urls]
+Homepage = "https://github.com/XaverRobrecht/StainNormalization"
+Repository = "https://github.com/XaverRobrecht/StainNormalization"
+
+[project.optional-dependencies]
+dev = ["pytest", "ruff"]
+
+[tool.setuptools.packages.find]
+include = ["scan*"]
