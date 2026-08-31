@@ -1,5 +1,5 @@
 # StainNormalization
-implemetns [SCAN algorithm](https://doi.org/10.1016/j.cmpb.2020.105506) for stain normalization in pure pytorch. This is used for stain normalization of histopathology scans. 
+implements [SCAN algorithm](https://doi.org/10.1016/j.cmpb.2020.105506) for stain normalization in pure pytorch. This is used for stain normalization of histopathology scans. 
 
 ## Brief method summary
 Briefly this works by solving a self consistency problem, where the stain vectors of hematoxylin and eosin are estimated as the median color(in optical density space) of the stroma and nuclei pixels. The nuclei and stroma pixels are extracted by a simple heuristic. The initial stain vectors are estimated by PCA/SVD of the optical densities of the whole image (ignoring white space).
