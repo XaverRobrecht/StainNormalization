@@ -3,7 +3,7 @@ import torch
 
 @torch.no_grad()
 def _gabor_kernel(theta, sigma=1.0, Lambda=10.0, psi=0.0, gamma=1.2, ksize=7):
-    """Generate Gabor filter kernel.
+    """Generate Gabor filter kernel. Standard parameters as listen in @see https://doi.org/10.1016/j.cmpb.2020.105506
 
     Parameters
     ----------
@@ -235,6 +235,7 @@ class ScanProcessor(torch.nn.Module):
             v_stroma = torch.nanmedian(masked_od,dim=-1).values
             w_new = torch.stack([v_nuclei, v_stroma], dim=2)
             w_est = w_new / torch.linalg.vector_norm(w_new, dim=1, keepdim=True)
+            
         hem = h_est[:, [0], :] * w_est[:, :, [0]]
         eos = h_est[:, [1], :] * w_est[:, :, [1]]
         # H scaling
