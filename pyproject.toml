@@ -3,7 +3,7 @@ requires = ["setuptools>=68", "wheel"]
 build-backend = "setuptools.build_meta"
 
 [project]
-name = "scan-stain-normalization"      # check availability on PyPI; "scan" alone is almost certainly taken
+name = "scan-stain-normalization" 
 version = "0.1.0"
 description = "PyTorch implementation of the SCAN algorithm for stain normalization of histopathology images"
 readme = "README.md"
